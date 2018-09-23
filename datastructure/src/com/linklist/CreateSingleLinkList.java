@@ -2,7 +2,7 @@ package com.linklist;
 
 	/*
 	 * Creating and traversing the Single Linked List,
-	 * This done bu creating static inner class.
+	 * This done by creating static inner class.
 	 */
 
 	/**

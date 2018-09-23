@@ -3,6 +3,7 @@
  */
 package com.linklist;
 
+
 /*
  * Creating and traversing the Single Linked List,
  * This done by creating static inner class.
@@ -11,7 +12,7 @@ package com.linklist;
  * @author sujeetk1
  *
  */
-public class DeleteHeadLinkedList {
+public class DeleteNthNodeSingleLinkedList {
 	
 	private Node head;
 	
@@ -37,7 +38,7 @@ public class DeleteHeadLinkedList {
 	 */
 	public static void main(String[] args) {
 		
-		DeleteHeadLinkedList singleLL = new DeleteHeadLinkedList();
+		DeleteNthNodeSingleLinkedList singleLL = new DeleteNthNodeSingleLinkedList();
 		
 		/*
 		 *  Initializing head node with value and next node is null
@@ -65,7 +66,7 @@ public class DeleteHeadLinkedList {
 		 * @param head node
 		 * @return return node after deleting the head node
 		 */
-		singleLL.head = deleteHead(singleLL.head);
+		singleLL.head = deleteHead(singleLL.head, 1);
 		
 		/*
 		 * Print the linked list after deletion of the head node
@@ -91,19 +92,20 @@ public class DeleteHeadLinkedList {
 	 * @param head node
 	 * @return return node after deleting the head node
 	 */
-	private static Node deleteHead(Node head){
-		Node node = null; 
-		if(head != null){
-			System.out.println("Deleted node Value is ::"+head.value);
-			/*
-			 * Assigning the head->next to node and 
-			 * after this return the node
-			 */
-			node = head.next;
-			//Assigning head->next to null
-			head.next = null;
+	private static Node deleteHead(Node head, int position){
+
+		if(head == null)
+			return null;
+		
+		Node node = head;
+		
+		if(position == 0){
+			head = head.next;
+			return head;
 		}
-		return  node;
+		
+		
+		return null;
 	}
 
 }
