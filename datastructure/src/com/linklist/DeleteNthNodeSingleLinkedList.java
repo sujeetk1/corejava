@@ -66,7 +66,7 @@ public class DeleteNthNodeSingleLinkedList {
 		 * @param head node
 		 * @return return node after deleting the head node
 		 */
-		singleLL.head = deleteHead(singleLL.head, 1);
+		singleLL.head = deleteNthNode(singleLL.head, 0);
 		
 		/*
 		 * Print the linked list after deletion of the head node
@@ -92,7 +92,7 @@ public class DeleteNthNodeSingleLinkedList {
 	 * @param head node
 	 * @return return node after deleting the head node
 	 */
-	private static Node deleteHead(Node head, int position){
+	private static Node deleteNthNode(Node head, int position){
 
 		if(head == null)
 			return null;
@@ -104,8 +104,22 @@ public class DeleteNthNodeSingleLinkedList {
 			return head;
 		}
 		
+		// Find previous node of the node to be deleted 
+        for (int i=0; node!=null && i<position-1; i++) 
+        	node = node.next; 
+  
+        // If position is more than number of ndoes 
+        if (node == null || node.next == null) 
+            return node; 
+  
+        // Node temp->next is the node to be deleted 
+        // Store pointer to the next of node to be deleted 
+        Node next = node.next.next; 
+  
+        node.next = next;  // Unlink the deleted node from list
 		
-		return null;
+		
+		return node;
 	}
 
 }
