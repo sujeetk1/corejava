@@ -5,7 +5,7 @@ package com.linklist;
 
 
 /*
- * Creating and traversing the Single Linked List,
+ * Deleting Nth element from the Single Linked List,
  * This done by creating static inner class.
  */
 /**
