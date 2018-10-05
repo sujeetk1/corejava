@@ -57,8 +57,10 @@ public class CreateDoubleLinkedList {
 	
 	
 	private static void printList(Node head){
-		
-		
+		while(head != null){
+			System.out.println(head.value);
+			head = head.next;
+		}
 		
 	}
 
