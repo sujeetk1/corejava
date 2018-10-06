@@ -4,7 +4,7 @@
 package adapter;
 
 /**
- * @author dell
+ * @author sujeetk1
  *
  */
 public class AdapterItalianFood implements Food{
